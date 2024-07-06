@@ -1,19 +1,73 @@
 #boxes {
     display: flex;
-    /* Встановлюємо flex-контейнер */
     flex-wrap: wrap;
-    /* Дозволяємо елементам переноситися на новий рядок */
     justify-content: flex-start;
-    /* Вирівнювання елементів починається зліва */
     align-items: flex-start;
-    /* Вирівнювання починається зверху */
-    padding: 10px;
-    /* Додаємо відступи між елементами */
+    padding: 32px;
+    background: #f6f6fe;
+    border-radius: 8px;
+    height: 134px;
+    box-sizing: border-box;
+    gap: 10px;
+    width: 486px;
 }
 
 #boxes div {
     margin: 5px;
-    /* Зазор між елементами */
     box-sizing: border-box;
-    /* Враховуємо padding у розрахунку розміра елемента */
+}
+
+#controls {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 16px;
+    background: #f6f6fe;
+    border-radius: 8px;
+    padding: 32px;
+    width: 486px;
+    height: 104px;
+    margin-bottom: 16px;
+}
+
+.controls-input {
+    border: 1px solid #808080;
+    border-radius: 8px;
+    padding: 8px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    background: #f6f6fe;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.controls-Create,
+.controls-Destroy {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    width: 120px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.controls-Create {
+    background: #4e75ff;
+}
+.controls-Create:hover {
+    background: #6c8cff;
+}
+.controls-Destroy {
+    background: #ff4e4e;
+}
+.controls-Destroy:hover {
+    background: #ff7070;;
 }

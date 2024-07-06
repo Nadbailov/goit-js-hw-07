@@ -4,25 +4,25 @@ function getRandomHexColor() {
 
 function createBoxes(amount) {
   const boxesContainer = document.getElementById('boxes');
-  boxesContainer.innerHTML = ''; // Очищаємо попередні елементи
+  boxesContainer.innerHTML = '';
 
-  let size = 30; // Початковий розмір
+  let size = 30;
   for (let i = 0; i < amount; i++) {
     const color = getRandomHexColor();
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
     box.style.backgroundColor = color;
-    box.style.margin = '5px'; // Додаємо зазор між елементами
-    box.style.boxSizing = 'border-box'; // Враховуємо padding у розмірах елементів
+    box.style.margin = '5px';
+    box.style.boxSizing = 'border-box'; 
     boxesContainer.appendChild(box);
-    size += 10; // Збільшуємо розмір для наступного елемента
+    size += 10;
   }
 }
 
 function destroyBoxes() {
   const boxesContainer = document.getElementById('boxes');
-  boxesContainer.innerHTML = ''; // Очищаємо всі елементи
+  boxesContainer.innerHTML = '';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const amount = parseInt(inputAmount.value);
     if (amount >= 1 && amount <= 100) {
       createBoxes(amount);
-      inputAmount.value = ''; // Очищаємо поле вводу
+      inputAmount.value = '';
     } else {
       alert('Please enter a number between 1 and 100.');
     }
